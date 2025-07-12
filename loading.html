@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rita Silva Portefolio</title>
+
+  <!-- Fonts & Styles -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Montserrat|Roboto:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/x-icon" href="images/logo.png" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body onload="showPage('index')"> 
+<div class="custom-cursor-wrapper">
+  <div class='cursor' id="cursor"></div>
+  <div class='cursor second-cursor'></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).mousemove(function (e) {
+      $('.cursor').eq(0).css({
+        left: e.clientX,
+        top: e.clientY
+      });
+
+      setTimeout(function () {
+        $('.cursor').eq(1).css({
+          left: e.clientX,
+          top: e.clientY
+        });
+      }, 120);
+    });
+  </script>
+
+<div id="curtain"></div>
+  <section class="page" id="loadingscreen">
+
+     <canvas id="stage"></canvas> <!-- move canvas OUTSIDE the flex container -->
+    <p id="showmovesmall" style="  color: #212529;">Deslize o dedo pelo ecrã!</p>
+    <p id="showmove" style="  color: #212529;">Mova o cursor pelo ecrã!</p>
+    <p id="showfirst" style="  color: #212529;">
+      <iconify-icon icon="line-md:loading-loop" class="responsive-icon1"></iconify-icon>
+      &nbsp;&nbsp;Carregando...
+    </p>
+    <p id="showsecond" onclick="showPage('index')">
+      Continuar <iconify-icon icon="line-md:arrow-right" class="responsive-icon"></iconify-icon>
+    </p>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    const canvas = document.getElementById('stage');
+    const ctx = canvas.getContext('2d');
+    let _last = {};
+    let _circles = [];
+    let _circCount = 0;
+
+function resizeCanvas() {
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = window.innerWidth * dpr;
+  canvas.height = window.innerHeight * dpr;
+  canvas.style.width = window.innerWidth + 'px';
+  canvas.style.height = window.innerHeight + 'px';
+  ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset transform
+  ctx.scale(dpr, dpr); // Scale for high-res
+}
+
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+    function handleMove(e) {
+      const x = e.x || e.touches?.[0]?.clientX;
+      const y = e.y || e.touches?.[0]?.clientY;
+
+      if (!_last.x) {
+        _last.x = x;
+        _last.y = y;
+      } else {
+        const velocity = {
+          x: Math.abs(x) - Math.abs(_last.x),
+          y: Math.abs(y) - Math.abs(_last.y)
+        };
+
+        if (Math.abs(velocity.x * velocity.y) > 2) {
+          if (_circles.length === 200) {
+            _circles[_circCount].update(x, y, velocity);
+            _circCount = (_circCount + 1) % 200;
+          } else {
+            _circles.push(new Circle(x, y, velocity, '#362154'));
+          }
+        }
+
+        _last.x = x;
+        _last.y = y;
+      }
+    }
+
+    function Circle(x, y, v, color) {
+      this.x = x - 6;
+      this.y = y - 6;
+      this.v = { x: v.x * 0.3, y: v.y * 0.3 };
+      this.radius = 4;
+      this.color = color;
+
+      this.update = function (x, y, v) {
+        this.x = x - 6;
+        this.y = y - 6;
+        this.v = { x: v.x * 0.3, y: v.y * 0.3 };
+        this.radius = 4;
+      };
+
+      this.draw = function () {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+        ctx.strokeStyle = this.color;
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        this.x += this.v.x;
+        this.y += this.v.y;
+        if (this.radius < 14) this.radius += 0.02;
+        this.v.x += this.v.x > 0 ? -0.01 : 0.01;
+        this.v.y += this.v.y > 0 ? -0.01 : 0.01;
+      };
+    }
+
+    function loop() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      _circles.forEach(circle => circle.draw());
+      requestAnimationFrame(loop);
+    }
+
+    window.addEventListener('mousemove', handleMove);
+    window.addEventListener('touchmove', handleMove, { passive: true });
+    requestAnimationFrame(loop);
+
+    // UI transitions
+    document.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        document.getElementById("showfirst").style.display = "none";
+        document.getElementById("showsecond").style.display = "block";
+      }, 6000);
+    });
+
+
+  </script>
+
+  <!-- Iconify -->
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+<section class="page" id="index">
+            <header class="header-down">
+            <div class="wrapper">
+                <div class="logo-top" id="logo-top">
+                    <a href="#" title="logo"><img src="images/h1_.svg" alt="logo" /></a>
+                </div>
+                
+                <nav class="menu">
+
+
+
+                    <ul id="categoriasheaderdown" style="margin-block-start: 1em;">
+
+
+<li title="INÍCIO">
+<a href="#" style="color: black; font-family: Roboto;font-size: 20px; padding: 20px">INÍCIO</a>
+</li>
+
+<li title="TRABALHOS">                          
+<a href="#" style="color: black; font-family: Roboto;font-size: 20px; padding: 20px">TRABALHOS</a>
+<ul style="padding-top: 16px; margin-block-start: 1em;"  onmouseover="showOverlaydownmenu()" onmouseout="hideOverlaydownmenu()">
+<li><a href="#" title="WEBSITES" target="_self">Websites</a></li>
+<li><a href="fotografias.html" title="FOTOGRAFIA" target="_self">Fotografia</a></li>
+<li><a href="videos.html" title="VIDEOS" target="_self">Vídeos</a></li>
+<li><a href="/en/the-project/" title="NOTÍCIAS DA FORMAÇÃO" target="_self" class="vibrate">Design de Comunicação</a></li>
+</ul>
+</li>
+
+<li title="CONTACTOS">                       
+<a href="contactos.html" style="color: black; font-family: Roboto;font-size: 20px; padding: 20px">CONTACTOS</a>
+</li>
+                    </ul>
+
+                </nav>
+
+                  <!-- botao menu hamburguer (ecrãs LG, MD, SM, XS) -->
+            
+                <span class="btn-mobile-menu open vibration vibrate" id="hammenu">
+                    <i class="fas fa-bars fa-lg iconspace" style=" font-size: 24px;" onclick="openNav()" id="hammenu"></i>
+                </span>
+
+
+       <!-- menu hamburguer -->
+
+
+                    <div class="sidenav" id="sidenav">
+                        <div class="container-fluid">
+
+<div class="closebutton">
+
+<div class="hammenu" style="text-align:right">
+<i class="fas fa-bars fa-lg iconspace" style=" font-size: 24px;" onclick="openNav()"></i>
+</div>
+</div>
+                        
+<div class="toplist" style="z-index:999">
+<ul>
+<li>
+<a href="#" class="active" title="INÍCIO" target="_self">INÍCIO</a>
+</li>
+<li>
+<a href="#" class="active" title="TRABALHOS" target="_self" id="haslist">TRABALHOS</a>
+<ul>
+<li><a href="#" title="WEBSITES">WEBSITES</a></li>
+<li><a href="fotografias.html" title="FOTOGRAFIA">FOTOGRAFIA</a></li>
+<li><a href="videos.html" title="VIDEOS">VÍDEOS</a></li>
+</ul>
+</li>
+<li>
+<a href="contactos.html" class="active" title="CONTACTOS" target="_self">CONTACTOS</a>
+</li>
+</ul>
+</div>
+
+                       
+
+
+                    </div>
+                    </div>
+
+
+       <!-- END menu hamburguer -->
+
+
+                
+            </div>
+            
+            
+        </header>
+<div class="masking-container">
+    <h1 class="masked-text">Bem-vindo</h1>
+</div>
+
+
+
+</section>
+
+
+<script>
+function showPage(id) {
+      // Hide all pages
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.style.display = 'none');
+
+      // Show selected page
+      document.getElementById(id).style.display = 'flex';
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+  const isTouch = matchMedia("(hover: none) and (pointer: coarse)").matches;
+  console.log("isTouch device?", isTouch);
+
+  const cursor = document.getElementById("cursor");
+  const showmove = document.getElementById("showmove");
+  const showmovesmall = document.getElementById("showmovesmall");
+  const allCursors = document.querySelectorAll(".cursor, .second-cursor");
+
+  console.log("cursor:", cursor);
+  console.log("showmove:", showmove);
+  console.log("showmovesmall:", showmovesmall);
+  console.log("allCursors:", allCursors);
+
+  if (isTouch) {
+    showmovesmall?.style.setProperty("display", "block", "important");
+    cursor?.style.setProperty("display", "none", "important");
+
+    allCursors.forEach(el => {
+      el.style.setProperty("display", "none", "important");
+    });
+  } else {
+    showmove?.style.setProperty("display", "block", "important");
+    cursor?.style.setProperty("display", "block", "important");
+  }
+});
+
+function openNav() {
+  const sidenav = document.getElementById("sidenav");
+
+  if (window.innerWidth <= 768) {
+
+    sidenav.style.width = sidenav.style.width === "100%" ? "0" : "100%";
+  } else {
+
+    sidenav.style.width = sidenav.style.width === "0" ? "0" : "0";
+  }
+}
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".toplist > ul > li > a");
+
+  links.forEach(link => {
+    link.addEventListener("click", function (e) {
+      const parentLi = this.parentElement;
+      const hasSubmenu = parentLi.querySelector("ul");
+
+      if (hasSubmenu) {
+        e.preventDefault();
+        parentLi.classList.toggle("active");
+      }
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".bottomlist > ul > li > a");
+
+  links.forEach(link => {
+    link.addEventListener("click", function (e) {
+      const parentLi = this.parentElement;
+      const hasSubmenu = parentLi.querySelector("ul");
+
+      if (hasSubmenu) {
+        e.preventDefault();
+        parentLi.classList.toggle("active");
+      }
+    });
+  });
+});
+  document.addEventListener("DOMContentLoaded", function () {
+    const allLis = document.querySelectorAll(".bottomlist > ul > li");
+
+    allLis.forEach(li => {
+      const submenu = li.querySelector("ul");
+      const link = li.querySelector("a");
+
+      if (submenu && link) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          
+
+          submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        });
+      }
+    });
+  });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const allLis = document.querySelectorAll(".toplist > ul > li");
+
+    allLis.forEach(li => {
+      const submenu = li.querySelector("ul");
+      const link = li.querySelector("a");
+
+      if (submenu && link) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          
+
+          submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        });
+      }
+    });
+  });
+
+</script>
+
+
+
+
+
+</body>
+</html>

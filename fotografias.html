@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rita Silva Portefolio</title>
+
+  <!-- Fonts & Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Montserrat|Roboto:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+  <link rel="stylesheet" href="styles2.css" />
+  <link rel="icon" type="image/x-icon" href="images/logo.png" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+</head>
+
+<body onload="showPage('contactos')"> 
+<div class="custom-cursor-wrapper">
+  <div class='cursor' id="cursor"></div>
+  <div class='cursor second-cursor'></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).mousemove(function (e) {
+      $('.cursor').eq(0).css({
+        left: e.clientX,
+        top: e.clientY
+      });
+
+      setTimeout(function () {
+        $('.cursor').eq(1).css({
+          left: e.clientX,
+          top: e.clientY
+        });
+      }, 120);
+    });
+
+
+  </script>
+
+<div id="curtain"></div>
+ 
+
+  <!-- Iconify -->
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<main>
+<section  id="fotografias">
+     <header class="header-down">
+            <div class="wrapper">
+                <div class="logo-top" id="logo-top">
+                    <a href="#" title="logo"><img src="images/h1_.svg" alt="logo" /></a>
+                </div>
+                
+                <nav class="menu">
+
+
+                    <ul id="categoriasheaderdown" style="margin-block-start: 1em;">
+
+
+<li title="INÍCIO">
+<a href="index.html" style="color: black; font-family: Roboto;font-size: 20px; padding: 20px">INÍCIO</a>
+</li>
+
+<li title="TRABALHOS">                          
+<a href="#" style="color: black; font-family: Roboto;font-size: 20px; padding: 20px">TRABALHOS</a>
+<ul style="padding-top: 16px; margin-block-start: 1em;"  onmouseover="showOverlaydownmenu()" onmouseout="hideOverlaydownmenu()">
+<li><a href="#" title="WEBSITES" target="_self">Websites</a></li>
+<li><a href="fotografias.html" title="FOTOGRAFIA" target="_self">Fotografia</a></li>
+<li><a href="#" title="VIDEOS" target="_self">Vídeos</a></li>
+<li><a href="/en/the-project/" title="NOTÍCIAS DA FORMAÇÃO" target="_self" class="vibrate">Design de Comunicação</a></li>
+</ul>
+</li>
+
+<li title="CONTACTOS">                       
+<a href="contactos.html" style="color: black; font-family: Roboto;font-size: 20px; padding: 20px">CONTACTOS</a>
+</li>
+                    </ul>
+
+
+                </nav>
+
+                  <!-- botao menu hamburguer (ecrãs LG, MD, SM, XS) -->
+            
+                <span class="btn-mobile-menu open vibration vibrate" id="hammenu">
+                    <i class="fas fa-bars fa-lg iconspace" style=" font-size: 24px;" onclick="openNav()" id="hammenu"></i>
+                </span>
+
+
+       <!-- menu hamburguer -->
+
+
+<div class="sidenav" id="sidenav">
+<div class="container-fluid">
+
+<div class="closebutton">
+
+<div class="hammenu" style="text-align:right">
+<i class="fas fa-bars fa-lg iconspace" style=" font-size: 24px;" onclick="openNav()"></i>
+</div>
+</div>
+                        
+<div class="toplist" style="z-index:999">
+<ul>
+<li>
+<a href="loading.html" class="active" title="INÍCIO" target="_self">INÍCIO</a>
+</li>
+<li>
+<a href="#" class="active" title="TRABALHOS" target="_self" id="haslist">TRABALHOS</a>
+<ul>
+<li><a href="#" title="WEBSITES">WEBSITES</a></li>
+<li><a href="#" title="FOTOGRAFIA">FOTOGRAFIA</a></li>
+<li><a href="videos.html" title="VIDEOS">VÍDEOS</a></li>
+</ul>
+</li>
+<li>
+<a href="contactos.html" class="active" title="CONTACTOS" target="_self">CONTACTOS</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+       <!-- END menu hamburguer -->
+
+
+                
+            </div>
+            
+            
+        </header>
+
+
+    <div class="contentwrittenspace2">
+<article id="content" class="wrappercontent columns">
+
+
+<div class="pageTitle">
+<h1><span>Fotografia</span></h1> 
+</div>
+
+
+
+             <div class="container-fluid" id="reflexos" style="padding-top:20px;">
+<div class="row mb-1 mb-md-4">
+
+<div class="d-none d-md-block col-md-6 col-lg-6 col-xl-6" style="padding-right:0px;">
+<div style="height: 100%; overflow: hidden;">
+<img style="width: 100%;height: auto;transform: rotate(180deg) scaleX(-1);" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752339574/IMG_20230115_143753_027_k8rsz5.jpg" alt="Photo 1" />
+</div>
+</div>
+
+<div class="col-6 col-sm-6 d-md-none" style="padding:0px;">
+  <div style="height: 100%; overflow: hidden;">
+<img 
+  style="width: 100%; height: auto; transform: rotate(180deg) scaleX(-1);" 
+  src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752253325/IMG_20230115_123348_786_xqlj31.jpg" 
+  alt="Photo 1" />
+  </div>
+</div>
+
+
+<div class="d-none d-md-block col-sm-6 col-md-6 col-lg-6 col-xl-6" style="padding-left:0px;">
+<div style="height: 100%; overflow: hidden; ">
+<img style="width: 100%;height: auto; transform: rotate(180deg);"src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752339631/IMG_20230115_142500_653_nx2wer.jpg" alt="Photo 1" />
+</div>
+</div>
+
+<div class="col-6 col-sm-6 d-md-none" style="padding:0px;">
+<img style="width: 100%;height: auto;transform: rotate(180deg);" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752253355/IMG_20230115_123802_454_fjpgvo.jpg" alt="Photo 1" />
+</div>
+
+</div>
+
+<div class="row mb-1 mb-md-4">
+
+<div class="d-none d-md-block col-md-6 col-lg-6 col-xl-6" style="padding-right:0px;">
+<div style="height: 100%; overflow: hidden;">
+<img style="width: 100%;height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752339574/IMG_20230115_143753_027_k8rsz5.jpg" alt="Photo 1" />
+</div>
+</div>
+
+<div class="col-6 col-sm-6 d-md-none" style="padding:0px;">
+<img style="width: 100%;height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752253325/IMG_20230115_123348_786_xqlj31.jpg" alt="Photo 1" />
+</div>
+
+
+<div class="d-none d-md-block col-sm-6 col-md-6 col-lg-6 col-xl-6" style="padding-left:0px;">
+<div style="height: 100%; overflow: hidden; ">
+<img style="width: 100%;height: auto; "src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752339631/IMG_20230115_142500_653_nx2wer.jpg" alt="Photo 1" />
+</div>
+</div>
+
+<div class="col-6 col-sm-6 d-md-none" style="padding:0px;">
+<img style="width: 100%;height: auto;transform: rotate(180deg);" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752253355/IMG_20230115_123802_454_fjpgvo.jpg" alt="Photo 1" />
+</div>
+
+</div>
+
+
+<div class="row mb-1 mb-md-5">
+
+  <div class="d-none d-md-block col-md-2 col-lg-2 col-xl-2"></div>
+
+  <div class="d-none d-md-block col-md-4 col-lg-4 col-xl-4">
+        <img style="      width: 100%;
+      height: auto;
+      " src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752339690/IMG_20230115_130847_378_yzsqmo.jpg" alt="Photo 1" />
+
+  </div>
+<div class="col-6 col-sm-6 d-md-none" style="padding:0px;"></div>
+
+
+
+<div class="d-none d-md-block col-md-6 col-lg-6 col-xl-6" style="padding-left:0px;">
+        <img style="      width: 100%;
+      height: auto;
+      " src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752339558/IMG_20230115_144100_584_jbpaai.jpg" alt="Photo 1" />
+      </div>
+
+<div class="col-6 col-sm-6 d-md-none" style="padding:0px;">
+<img style="      width: 100%;
+      height: auto;
+      " src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752234836/IMG_20230115_094500_tm7jgo.jpg" alt="Photo 1" />
+</div>
+
+
+</div>
+
+
+<div class="row mb-1 mb-md-5">
+
+<div class="d-none d-md-block col-md-4 col-lg-4 col-xl-4">
+<img style=" width: 100%; height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752339593/IMG_20230115_143240_606_okck1d.jpg" alt="Photo 1" />
+</div>
+
+<div class="col-4 col-sm-4 d-md-none" style="padding:0px;transform: rotate(180deg);">
+<img style=" width: 100%; height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752339621/IMG_20230115_142829_493_rt0dg5.jpg" alt="Photo 1" />
+</div>
+
+<div class="d-none d-md-block col-md-8 col-lg-8 col-xl-8" style="position: relative; overflow: hidden; aspect-ratio: 4 / 3;">
+  <img 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transform: rotate(90deg);" 
+    src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752339670/IMG_20230115_131520_399_yherrg.jpg" 
+    alt="Photo 1" />
+</div>
+
+<div class="col-8 col-sm-8 d-md-none" style="padding:0px;">
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<hr style="margin-bottom: 20px">
+</div>
+
+
+
+
+
+              <div class="container-fluid" id="texturas" style="padding-top:20px;">
+<div class="row mb-1 mb-md-4">
+
+<div class="d-none d-md-block col-md-6 col-lg-6 col-xl-6" style="padding-right:0px;">
+<div style="height: 100%; overflow: hidden;">
+<img style="width: 100%;height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752253325/IMG_20230115_123348_786_xqlj31.jpg" alt="Photo 1" />
+</div>
+</div>
+
+<div class="col-6 col-sm-6 d-md-none" style="padding:0px;">
+<img style="width: 100%;height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752253325/IMG_20230115_123348_786_xqlj31.jpg" alt="Photo 1" />
+</div>
+
+
+<div class="d-none d-md-block col-sm-6 col-md-6 col-lg-6 col-xl-6" style="padding-left:0px;">
+<div style="height: 100%; overflow: hidden; ">
+<img style="width: 100%;height: auto; transform: rotate(180deg);"src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752253355/IMG_20230115_123802_454_fjpgvo.jpg" alt="Photo 1" />
+</div>
+</div>
+
+<div class="col-6 col-sm-6 d-md-none" style="padding:0px;">
+<img style="width: 100%;height: auto;transform: rotate(180deg);" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752253355/IMG_20230115_123802_454_fjpgvo.jpg" alt="Photo 1" />
+</div>
+
+</div>
+
+<div class="row mb-0 mb-md-0">
+
+<div class="d-none d-md-block col-md-4 col-lg-4 col-xl-4">
+<img style="transform: rotate(180deg); width: 100%; height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752253403/IMG_20230115_124141_233_ezjtjy.jpg" alt="Photo 1" />
+</div>
+
+<div class="col-4 col-sm-4 d-md-none" style="padding:0px;">
+<img style="transform: rotate(180deg); width: 100%; height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752253403/IMG_20230115_124141_233_ezjtjy.jpg" alt="Photo 1" />
+</div>
+
+<div class="d-none d-md-block col-md-8 col-lg-8 col-xl-8">
+</div>
+
+<div class="col-8 col-sm-8 d-md-none" style="padding:0px;">
+</div>
+
+</div>
+
+<div class="row mb-1 mb-md-0">
+
+<div class="d-none d-md-block col-md-4 col-lg-4 col-xl-4">
+<img style="transform: rotate(180deg); transform: scaleX(-1); width: 100%; height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752253403/IMG_20230115_124141_233_ezjtjy.jpg" alt="Photo 1" />
+</div>
+
+<div class="col-4 col-sm-4 d-md-none" style="padding:0px;">
+<img style="transform: rotate(180deg); transform: scaleX(-1); width: 100%; height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752253403/IMG_20230115_124141_233_ezjtjy.jpg" alt="Photo 1" />
+</div>
+
+<div class="d-none d-md-block col-md-8 col-lg-8 col-xl-8">
+<img style="width: 100%; height: 80%; " src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752253382/IMG_20230115_124000_019_dcgjal.jpg" alt="Photo 1" />
+</div>
+
+<div class="col-8 col-sm-8 d-md-none" style="padding-right:0px; padding-left:4px" >
+  <img style="width: 100%; height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752253382/IMG_20230115_124000_019_dcgjal.jpg" alt="Photo 1" />
+</div>
+
+</div>
+
+<div class="row mb-1 mb-md-4">
+
+<div class="d-none d-md-block col-md-4 col-lg-4 col-xl-4">
+  <img style="width: 100%;height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752253230/IMG_20230115_114933_591_rwyljz.jpg" alt="Photo 1" />
+</div>
+
+
+
+<div class="d-none d-md-block col-md-4 col-lg-4 col-xl-4">
+<img style="width: 100%;height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752253415/IMG_20230115_124330_453_box0b0.jpg" alt="Photo 1" />
+</div>
+
+
+
+
+<div class="d-none d-md-block col-md-4 col-lg-4 col-xl-4">
+<img style="width: 100%;height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752253262/IMG_20230115_121531_427_wen1bq.jpg" alt="Photo 1" />
+</div>
+
+
+<div class="col-4 col-sm-4 d-md-none" style="padding-right:2px; padding-left:0px">
+  <div class="square-thumb">
+    <img src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752253230/IMG_20230115_114933_591_rwyljz.jpg" alt="Photo 1" />
+  </div>
+</div>
+
+<div class="col-4 col-sm-4 d-md-none" style="padding-right:1px; padding-left:1px">
+  <div class="square-thumb">
+    <img src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752253415/IMG_20230115_124330_453_box0b0.jpg" alt="Photo 1" />
+  </div>
+</div>
+
+<div class="col-4 col-sm-4 d-md-none" style="padding-right:0px; padding-left:2px">
+  <div class="square-thumb">
+    <img src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752253262/IMG_20230115_121531_427_wen1bq.jpg" alt="Photo 1" />
+  </div>
+</div>
+
+</div>
+
+
+
+<hr style="margin-bottom: 20px">
+</div>
+
+
+
+
+
+
+<div class="container-fluid" id="maos" style="padding-top:20px;">
+<div class="row mb-1 mb-md-4">
+
+<div class="d-none col-md-6 col-lg-6 col-xl-6 d-md-block">
+<img style="width: 100%;height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752234976/IMG_20230115_093952_xaop3q.jpg" alt="Photo 1" />
+</div>
+
+<div class="col-6 col-sm-6 d-md-none" style="padding:0px;">
+<img style="width: 100%;height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752234976/IMG_20230115_093952_xaop3q.jpg" alt="Photo 1" />
+</div>
+
+
+<div class="d-none d-md-block col-md-6 col-lg-6 col-xl-6">
+<img style="width: 100%;height: auto;"src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752234797/IMG_20230115_093834_ap7pdr.jpg" alt="Photo 1" />
+</div>
+
+<div class="col-6 col-sm-6 d-md-none" style="padding:0px;">
+<img style="width: 100%;height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752234797/IMG_20230115_093834_ap7pdr.jpg" alt="Photo 1" />
+</div>
+
+</div>
+
+<div class="row mb-1 mb-md-4">
+
+<div class="d-none d-md-block col-md-4 col-lg-4 col-xl-4">
+        <img style="      width: 100%;
+      height: auto;
+      " src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752234809/IMG_20230115_094038_onhjhw.jpg" alt="Photo 1" />
+      </div>
+
+                  <div class="col-4 col-sm-4 d-md-none" style="padding:0px;">
+         <img style="      width: 100%;
+      height: auto;
+      " src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752234809/IMG_20230115_094038_onhjhw.jpg" alt="Photo 1" />
+      </div>
+
+<div class="d-none d-md-block col-md-8 col-lg-8 col-xl-8">
+</div>
+
+                  <div class="col-8 col-sm-8 d-md-none" style="padding:0px;">
+      </div>
+
+</div>
+
+<div class="row mb-1 mb-md-4">
+
+<div class="d-none d-md-block col-md-4 col-lg-4 col-xl-4">
+</div>
+
+<div class="col-4 col-sm-4 d-md-none" style="padding:0px;">
+</div>
+
+<div class="d-none d-md-block col-md-4 col-lg-4 col-xl-4">
+        <img style="      width: 100%;
+      height: auto;
+      " src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752234836/IMG_20230115_094500_tm7jgo.jpg" alt="Photo 1" />
+      </div>
+
+<div class="col-4 col-sm-4 d-md-none" style="padding:0px;">
+<img style="      width: 100%;
+      height: auto;
+      " src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752234836/IMG_20230115_094500_tm7jgo.jpg" alt="Photo 1" />
+</div>
+
+
+<div class="d-none d-md-block col-md-4 col-lg-4 col-xl-4">
+            <img style="      width: 100%;
+      height: auto;
+      " src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752234828/IMG_20230115_094933_tsjunb.jpg" alt="Photo 1" />
+</div>
+
+<div class="col-4 col-sm-4 d-md-none" style="padding:0px;">
+<img style="      width: 100%;
+      height: auto;
+      " src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752234828/IMG_20230115_094933_tsjunb.jpg" alt="Photo 1" />
+</div>
+
+</div>
+
+
+<div class="row mb-1 mb-md-4 align-items-end">
+
+<div class="d-none d-md-block col-md-4 col-lg-4 col-xl-4">
+<img style="width: 100%;height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752234884/IMG_20230106_160544_mlov4s.jpg" alt="Photo 1" />
+</div>
+
+<div class="col-4 col-sm-4 d-md-none align-items-end" style="padding-right:3px; padding-left:0px">
+<img style="width: 100%; height: auto; " src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752234884/IMG_20230106_160544_mlov4s.jpg" alt="Photo 1"/>
+</div>
+
+
+<div class="d-none d-md-block col-md-4 col-lg-4 col-xl-4">
+<img style="width: 100%;height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752234869/IMG_20230106_160550_kt0dip.jpg" alt="Photo 1" />
+</div>
+
+<div class="col-4 col-sm-4 d-md-none align-items-end" style="padding-right:3px; padding-left:0px">
+<img style="width: 100%; height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752234869/IMG_20230106_160550_kt0dip.jpg" alt="Photo 1"/>
+</div>
+
+
+<div class="d-none d-md-block col-md-4 col-lg-4 col-xl-4">
+<img style="width: 100%;height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752234895/IMG_20230106_160503_eywtfh.jpg" alt="Photo 1" />
+</div>
+
+<div class="col-4 col-sm-4 d-md-none align-items-end" style="padding:0px;">
+<img style="width: 100%; height: auto;" src="https://res.cloudinary.com/dkdzztl5k/image/upload/v1752234895/IMG_20230106_160503_eywtfh.jpg" alt="Photo 1"/>
+</div>
+
+
+</div>
+<hr style="margin-bottom: 20px">
+</div>
+
+
+
+</article>
+    </div>
+<footer>
+  <div class="circle-rain"></div>
+  <div class="circle-rain"></div>
+  <div class="circle-rain"></div>
+  <div class="circle-rain"></div>
+  <div class="circle-rain"></div>
+  <div class="circle-rain"></div>
+  <div class="circle-rain"></div>
+  <div class="circle-rain"></div>
+  <div class="circle-rain"></div>
+
+      <div class="footer-content">
+    <div class="row">
+
+      <hr class="smalllineend" />
+
+
+
+        <p class="d-flex justify-content-center align-items-center endfooter" style="margin-bottom:0px">
+          <span>Rita Silva © 2025</span>
+        </p>
+
+
+
+
+    </div>
+      </div>
+</footer>
+
+        
+</section>
+
+
+
+</main>
+
+
+
+
+<script>
+const slideIndices = {};  // keeps track of each slider's current slide
+
+function plusSlides(sliderId, n) {
+  if (!slideIndices[sliderId]) slideIndices[sliderId] = 1;
+  showSlides(sliderId, slideIndices[sliderId] += n);
+}
+
+function currentSlide(sliderId, n) {
+  slideIndices[sliderId] = n;
+  showSlides(sliderId, n);
+}
+
+function showSlides(sliderId, n) {
+  const container = document.getElementById(sliderId);
+  const slides = container.getElementsByClassName("slide");
+
+  const dotsContainer = document.getElementById("dots" + sliderId.slice(-1)); // e.g., dots1 for slider1
+  const dots = dotsContainer ? dotsContainer.getElementsByClassName("dot") : [];
+
+  // Correct bounds and update slideIndices and n
+  if (n > slides.length) {
+    slideIndices[sliderId] = 1;
+    n = 1;
+  } else if (n < 1) {
+    slideIndices[sliderId] = slides.length;
+    n = slides.length;
+  } else {
+    slideIndices[sliderId] = n;
+  }
+
+  // Hide all slides
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+  }
+
+  // Deactivate all dots
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("active");
+  }
+
+  // Show the current slide
+  slides[n - 1].classList.add("active");
+
+  // Activate the current dot if exists
+  if (dots.length > 0) {
+    dots[n - 1].classList.add("active");
+  }
+}
+
+// Initialize sliders on page load
+document.addEventListener("DOMContentLoaded", () => {
+  // Initialize all your sliders here, e.g.:
+  showSlides("slider1", 1);
+  showSlides("slider2", 1);
+});
+
+// --- Lightbox functions ---
+let lightboxIndex = 0;
+let lightboxImages = [];
+
+function openLightbox(imgElement) {
+  // Find the closest slider container (adjust the selector if needed)
+  const slider = imgElement.closest('.slideshow-container');
+  if (!slider) return;
+
+  // Collect all images only inside this slider
+  lightboxImages = Array.from(slider.querySelectorAll('img'));
+
+  // Find clicked image index in this slider
+  lightboxIndex = lightboxImages.indexOf(imgElement);
+  if (lightboxIndex === -1) return;
+
+  // Show lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  lightboxImg.src = imgElement.src;
+  lightboxImg.alt = imgElement.alt;
+  lightbox.style.display = 'flex';
+}
+
+function changeLightboxSlide(step) {
+  if (lightboxImages.length === 0) return;
+
+  lightboxIndex += step;
+
+  if (lightboxIndex < 0) {
+    lightboxIndex = lightboxImages.length - 1;
+  } else if (lightboxIndex >= lightboxImages.length) {
+    lightboxIndex = 0;
+  }
+
+  const newImg = lightboxImages[lightboxIndex];
+  const lightboxImg = document.getElementById('lightbox-img');
+  lightboxImg.src = newImg.src;
+  lightboxImg.alt = newImg.alt;
+}
+
+function closeLightbox(e) {
+  if (
+    e.target.id === 'lightbox-img' ||
+    e.target.id === 'lightbox-prev' ||
+    e.target.id === 'lightbox-next'
+  ) return;
+
+  document.getElementById('lightbox').style.display = 'none';
+}
+
+// Optional keyboard nav for lightbox
+document.addEventListener("keydown", function(e) {
+  const lightbox = document.getElementById("lightbox");
+  if (lightbox.style.display !== "flex") return;
+
+  if (e.key === "ArrowRight") changeLightboxSlide(1);
+  if (e.key === "ArrowLeft") changeLightboxSlide(-1);
+  if (e.key === "Escape") closeLightbox(e);
+});
+
+
+
+function openLightbox(imgElement) {
+  const slider = imgElement.closest('.slideshow-container');
+  if (!slider) return;
+
+  lightboxImages = Array.from(slider.querySelectorAll('img'));
+  lightboxIndex = lightboxImages.indexOf(imgElement);
+  if (lightboxIndex === -1) return;
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  lightboxImg.src = imgElement.src;
+  lightboxImg.alt = imgElement.alt;
+  lightbox.style.display = 'flex';
+
+  // 🔄 Apply class directly to cursor
+  document.querySelector('.cursor')?.classList.add('lightbox-hover');
+  document.querySelector('.second-cursor')?.classList.add('lightbox-hover');
+}
+
+function closeLightbox(e) {
+  if (
+    e.target.id === 'lightbox-img' ||
+    e.target.id === 'lightbox-prev' ||
+    e.target.id === 'lightbox-next'
+  ) return;
+
+  document.getElementById('lightbox').style.display = 'none';
+
+  // 🔄 Remove class from cursor
+  document.querySelector('.cursor')?.classList.remove('lightbox-hover');
+  document.querySelector('.second-cursor')?.classList.remove('lightbox-hover');
+}
+
+
+
+
+
+function showPage(id) {
+      // Hide all pages
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.style.display = 'none');
+
+      // Show selected page
+      document.getElementById(id).style.display = 'flex';
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+  const isTouch = matchMedia("(hover: none) and (pointer: coarse)").matches;
+  console.log("isTouch device?", isTouch);
+
+  const cursor = document.getElementById("cursor");
+  const showmove = document.getElementById("showmove");
+  const showmovesmall = document.getElementById("showmovesmall");
+  const allCursors = document.querySelectorAll(".cursor, .second-cursor");
+
+  console.log("cursor:", cursor);
+  console.log("showmove:", showmove);
+  console.log("showmovesmall:", showmovesmall);
+  console.log("allCursors:", allCursors);
+
+  if (isTouch) {
+    showmovesmall?.style.setProperty("display", "block", "important");
+    cursor?.style.setProperty("display", "none", "important");
+
+    allCursors.forEach(el => {
+      el.style.setProperty("display", "none", "important");
+    });
+  } else {
+    showmove?.style.setProperty("display", "block", "important");
+    cursor?.style.setProperty("display", "block", "important");
+  }
+});
+
+function openNav() {
+  const sidenav = document.getElementById("sidenav");
+
+  if (window.innerWidth <= 768) {
+
+    sidenav.style.width = sidenav.style.width === "100%" ? "0" : "100%";
+  } else {
+
+    sidenav.style.width = sidenav.style.width === "0" ? "0" : "0";
+  }
+}
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".toplist > ul > li > a");
+
+  links.forEach(link => {
+    link.addEventListener("click", function (e) {
+      const parentLi = this.parentElement;
+      const hasSubmenu = parentLi.querySelector("ul");
+
+      if (hasSubmenu) {
+        e.preventDefault();
+        parentLi.classList.toggle("active");
+      }
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".bottomlist > ul > li > a");
+
+  links.forEach(link => {
+    link.addEventListener("click", function (e) {
+      const parentLi = this.parentElement;
+      const hasSubmenu = parentLi.querySelector("ul");
+
+      if (hasSubmenu) {
+        e.preventDefault();
+        parentLi.classList.toggle("active");
+      }
+    });
+  });
+});
+  document.addEventListener("DOMContentLoaded", function () {
+    const allLis = document.querySelectorAll(".bottomlist > ul > li");
+
+    allLis.forEach(li => {
+      const submenu = li.querySelector("ul");
+      const link = li.querySelector("a");
+
+      if (submenu && link) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          
+
+          submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        });
+      }
+    });
+  });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const allLis = document.querySelectorAll(".toplist > ul > li");
+
+    allLis.forEach(li => {
+      const submenu = li.querySelector("ul");
+      const link = li.querySelector("a");
+
+      if (submenu && link) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          
+
+          submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        });
+      }
+    });
+  });
+
+  
+
+  $('iframe').on('mouseenter', function () {
+  $('.cursor').css('opacity', '0');
+});
+
+$('iframe').on('mouseleave', function () {
+  $('.cursor').css('opacity', '1');
+});
+
+function toggleZoom() {
+  event.stopPropagation();
+  const img = document.getElementById("lightbox-img");
+  img.classList.toggle("zoomed");
+}
+
+document.addEventListener("contextmenu", event => event.preventDefault());
+
+</script>
+
+
+<div id="lightbox" onclick="closeLightbox(event)">
+    <span class="lightbox-close" onclick="closeLightbox(event)"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="6" y1="6" x2="24" y2="24" />
+    <line x1="24" y1="6" x2="6" y2="24" />
+  </svg></span>
+  <span class="lightbox-arrow" id="lightbox-prev" onclick="changeLightboxSlide(-1)">❮</span>
+  <img id="lightbox-img" src="" alt="Full View" onclick="toggleZoom()">
+  <div class="watermark">© Rita Silva 2025</div>
+  <span class="lightbox-arrow" id="lightbox-next" onclick="changeLightboxSlide(1)">❯</span>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rita Silva Portefolio</title>
+
+  <!-- Fonts & Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Montserrat|Roboto:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/x-icon" href="images/logo.png" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body onload="showPage('contactos')"> 
+<div class="custom-cursor-wrapper">
+  <div class='cursor' id="cursor"></div>
+  <div class='cursor second-cursor'></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).mousemove(function (e) {
+      $('.cursor').eq(0).css({
+        left: e.clientX,
+        top: e.clientY
+      });
+
+      setTimeout(function () {
+        $('.cursor').eq(1).css({
+          left: e.clientX,
+          top: e.clientY
+        });
+      }, 120);
+    });
+  </script>
+
+<div id="curtain"></div>
+ 
+
+  <!-- Iconify -->
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<main>
+<section class="page" id="contactos">
+     <header class="header-down">
+            <div class="wrapper">
+                <div class="logo-top" id="logo-top">
+                    <a href="#" title="logo"><img src="images/h1_.svg" alt="logo" /></a>
+                </div>
+                
+                <nav class="menu">
+
+
+
+                    <ul id="categoriasheaderdown" style="margin-block-start: 1em;">
+
+
+                        <li  onmouseover="showOverlaydownmenu()" onmouseout="hideOverlaydownmenu()" title="INÍCIO">
+                          
+<a href="index.html" style="color: black; font-family: Roboto;
+    font-size: 20px; padding: 20px">INÍCIO</a>
+                            <ul style="padding-top: 16px; margin-block-start: 1em;" onmouseover="showOverlaydownmenu()" onmouseout="hideOverlaydownmenu()">
+                                <li  onmouseover="showOverlaydownmenu()" onmouseout="hideOverlaydownmenu()"><a  href="#" title="GRUPOS DE INVESTIGAÇÃO DO IA" target="_self" class="vibrate">Quem sou</a></li>
+                            </ul>
+                        </li>
+
+                        <li  onmouseover="showOverlaydownmenu()" onmouseout="hideOverlaydownmenu()"  title="FORMAÇÃO">
+                          
+<a href="#" style="color: black; font-family: Roboto;
+    font-size: 20px; padding: 20px">TRABALHOS</a>
+                            <ul style="padding-top: 16px; margin-block-start: 1em;"  onmouseover="showOverlaydownmenu()" onmouseout="hideOverlaydownmenu()">
+                                <li  onmouseover="showOverlaydownmenu()" onmouseout="hideOverlaydownmenu()"><a href="/en/the-project/" title="OFERTA FORMATIVA" target="_self" class="vibrate">Websites</a></li>
+                                <li  onmouseover="showOverlaydownmenu()" onmouseout="hideOverlaydownmenu()"><a href="/en/the-project/" title="NOTÍCIAS DA FORMAÇÃO" target="_self" class="vibrate">Fotografia</a></li>
+                                <li  onmouseover="showOverlaydownmenu()" onmouseout="hideOverlaydownmenu()"><a href="videos.html" title="NOTÍCIAS DA FORMAÇÃO" target="_self" class="vibrate">Vídeos</a></li>
+                                                                <li  onmouseover="showOverlaydownmenu()" onmouseout="hideOverlaydownmenu()"><a href="/en/the-project/" title="NOTÍCIAS DA FORMAÇÃO" target="_self" class="vibrate">Design de Comunicação</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li  onmouseover="showOverlaydownmenu()" onmouseout="hideOverlaydownmenu()" title="DIVULGAÇÃO">
+                          
+<a href="contactos.html" style="color: black; font-family: Roboto;
+    font-size: 20px; padding: 20px">CONTACTOS</a>
+
+
+
+
+                </nav>
+
+                  <!-- botao menu hamburguer (ecrãs LG, MD, SM, XS) -->
+            
+                <span class="btn-mobile-menu open vibration vibrate" id="hammenu">
+                    <i class="fas fa-bars fa-lg iconspace" style=" font-size: 24px;" onclick="openNav()" id="hammenu"></i>
+                </span>
+
+
+
+       <!-- menu hamburguer -->
+
+<div class="sidenav" id="sidenav">
+<div class="container-fluid">
+
+<div class="closebutton">
+
+<div class="hammenu" style="text-align:right">
+<i class="fas fa-bars fa-lg iconspace" style=" font-size: 24px;" onclick="openNav()"></i>
+</div>
+</div>
+                        
+<div class="toplist" style="z-index:999">
+<ul>
+<li>
+<a href="loading.html" class="active" title="INÍCIO" target="_self">INÍCIO</a>
+</li>
+<li>
+<a href="#" class="active" title="TRABALHOS" target="_self" id="haslist">TRABALHOS</a>
+<ul>
+<li><a href="#" title="WEBSITES">WEBSITES</a></li>
+<li><a href="fotografias.html" title="FOTOGRAFIA">FOTOGRAFIA</a></li>
+<li><a href="videos.html" title="VIDEOS">VÍDEOS</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="active" title="CONTACTOS" target="_self">CONTACTOS</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+       <!-- END menu hamburguer -->
+
+
+                
+            </div>
+            
+            
+        </header>
+
+
+    <div class="contentwrittenspace">
+<article id="content" class="wrappercontent columns">
+
+
+    <div class="pageTitle">
+<h1><span>Sobre mim</span></h1> 
+
+</div>
+
+
+    <div id="content-container">
+        <div class="content-block">
+            <div class="content-right">
+                <div class="allcontent">
+                    
+<div><h2><span class="gca_html_editor_1">Olá, sou a Rita!</span></h2></div>
+<div style="text-align: left;">Atualmente, sou estudante do terceiro ano na licenciatura em Ciências da Comunicação 
+da Faculdade de Letras do Porto. Com especialização no ramo multimédia, procuro oportunidades na área da comunicação e marketing digital onde possa aplicar os meus conhecimentos de produção de conteúdos para criar pontes entre as empresas e os seus públicos. 
+<br>A minha formação universitária capacitou-me com os recursos necessários para ser capaz de <b>produzir discursos</b> e identidades de marca <b>para todas as circunstâncias e públicos</b> associados, principalmente no meio digital e <b>para as redes sociais</b>. Através da minha <b>criatividade e pensamento crítico</b>, consigo adaptar os meus <b>conhecimentos de design visual</b> às mais recentes tendências de comunicação, prezando sempre a <b>atenção aos detalhes</b>. Através da minha licenciatura, também tive contacto com a produção de <b>produtos de comunicação informativa e empresarial</b> (reportagens escritas e aúdio, comunicados de imprensa e conteúdo para newsletters), <b>produção de vídeo</b> (planeamento, realização e captura de imagem, pós-realização e edição/tratamento de imagem e som), <b>fotografia</b>, <b>design e ilustração</b>. Produzi também, em regime voluntário, <b>elementos de suporte visual para os conteúdos das redes sociais</b> da <a style="color:#212529" href="https://www.instagram.com/acomunidadept?igsh=MWwybDFnaTNiYWd4eg==">Comunidade Portugal</a> e o seu flyer de recrutamento. 
+Pronta para qualquer desafio, sou versátil nas minhas abordagens para o <b>cumprimento de objetivos e de prazos</b>. Acredito na importância do <b>trabalho em equipa</b> para o alcançar de grandes feitos.
+
+    </div>
+<hr>
+<br>
+<div><h2><span class="gca_html_editor_1">Hard-Skills</span></h2></div>
+<div style="text-align: justify;"> 
+  <ul style="margin-bottom:0px" class="hollow-list">
+    <li>Programação Front-End com recurso a <b>HTML, CSS,
+ Javascript (avançados)</b> e <b>Python (básico)</b></li>
+ <li>Design de Interação Web (conhecimentos
+ de ferramentas como <b>Figma</b>)</li>
+  <li>Produção de conteúdo visual (conhecimentos
+ de ferramentas como <b>Canva</b>)</li>
+ <li>Modelação 3D com recurso a <b>3ds Max</b></li>
+ <li>Edição de vídeo e som com recurso a
+ <b>Adobe Premier Pro</b>, <b>Capcut</b>, <b>Adobe Audition</b> e <b>Audacity</b></li>
+ <li>Edição de imagem com recurso a
+ <b>Photoshop</b> e <b>Illustrator</b></li>
+ <li>Conhecimentos de Microsoft Office <b>(Excel,
+ Powerpoint, Word)</b></li>
+ <li>Proficiência no idioma <b>Português (nativa)</b> e
+ <b>Inglês (nível B2)</b></li>
+ <li>Comunicação escrita, experiência com
+ <b>comunicados de imprensa, newsletters</b> e
+ outras formas de comunicação empresarial</li>
+    </div>
+    <br>
+    <hr>
+<br>
+
+<div><h2><span class="gca_html_editor_1">Experiência</span></h2></div>
+
+
+<div class="experience-wrapper">
+<div class="experiencename">
+  
+  
+  <em>(ABRIL - MAIO 2025)</em><h3>DESIGNER E DESENVOLVEDORA 
+WEB FRONT-END</h3><p>Estágio Curricular no Centro de Astrofísica
+ da Universidade do Porto (CAUP)</p></div>
+<div class="experiencedetails" style="text-align: left;">Redesenhar a interface e a estrutura da informação
+ do website oficial do CAUP; Criar uma nova
+ estratégia de design de interação; Desenvolvimento
+ e implementação de uma nova estrutura web
+ responsiva com recurso a HTML, CSS e Javascript
+ para o website.
+    </div>
+</div>
+
+<div class="experience-wrapper">
+<div class="experiencename">
+  
+  
+  <em>(MARÇO - ABRIL 2025)</em><h3>DESIGNER E DESENVOLVEDORA 
+WEB FRONT-END</h3><p>Estágio Curricular no Planetário do Porto</p></div>
+<div class="experiencedetails" style="text-align: left;">Desenhar e desenvolver um design de estrutura
+ responsiva para um website pré-existente;
+ Atualização do código HTML do website,
+ reconstruindo elementos de display media presentes
+ e incorporando novos recursos visuais com recurso a
+ CSS e Javascript.
+    </div>
+</div>
+<hr>
+
+<div><h2><span  class="gca_html_editor_1">Contactos</span></h2></div>
+
+<div class="contactos" style="text-align: justify; margin-top:20px">
+  
+    <h3>Telemóvel</h3>
+<p class="hover-wrapper">  <a href="tel:+351918963192" class="mail-link" style="display: inline-flex; align-items: center; gap: 6px;">
+    <span>(+351) 918 963 192</span>
+    
+  </a>
+  
+<svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none">
+  <path d="M5 19L19 5" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <polyline points="12,5 19,5 19,12" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
+</svg></p>
+</div>
+
+
+<div class="contactos" style="text-align: justify; margin-top:20px">
+  
+  <h3>Email</h3>
+<p class="hover-wrapper">  <a href="mailto:thearthedesign@gmail.com" class="mail-link" style="display: inline-flex; align-items: center; gap: 6px;">
+    <span>thearthedesign@gmail.com</span>
+    
+  </a>
+<svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none">
+  <path d="M5 19L19 5" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <polyline points="12,5 19,5 19,12" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
+</svg></p>
+</div>
+
+    <div class="contactos" style="text-align: justify; margin-top:20px">
+      <h3>Linkedin</h3>
+ <p class="hover-wrapper"> <a href="www.linkedin.com/in/ritaterrososilva" class="mail-link" style="display: inline-flex; align-items: center; gap: 6px;">
+    <span>in/ritaterrososilva</span>
+    
+  </a>
+<svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none">
+  <path d="M5 19L19 5" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <polyline points="12,5 19,5 19,12" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
+</svg> </p>
+</div>
+<hr>
+
+
+</div>  
+
+</div>
+</div>
+</div>
+
+
+</article>
+
+</div>
+
+<footer>
+  <div class="circle-rain"></div>
+  <div class="circle-rain"></div>
+  <div class="circle-rain"></div>
+  <div class="circle-rain"></div>
+  <div class="circle-rain"></div>
+  <div class="circle-rain"></div>
+  <div class="circle-rain"></div>
+  <div class="circle-rain"></div>
+  <div class="circle-rain"></div>
+
+      <div class="footer-content">
+    <div class="row">
+
+      <hr class="smalllineend" />
+
+
+
+        <p class="d-flex justify-content-center align-items-center endfooter" style="margin-bottom:0px">
+          <span>Rita Silva © 2025</span>
+        </p>
+
+
+
+
+    </div>
+      </div>
+</footer>
+
+        
+</section>
+
+
+
+</main>
+
+
+
+
+<script>
+function showPage(id) {
+      // Hide all pages
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.style.display = 'none');
+
+      // Show selected page
+      document.getElementById(id).style.display = 'flex';
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+  const isTouch = matchMedia("(hover: none) and (pointer: coarse)").matches;
+  console.log("isTouch device?", isTouch);
+
+  const cursor = document.getElementById("cursor");
+  const showmove = document.getElementById("showmove");
+  const showmovesmall = document.getElementById("showmovesmall");
+  const allCursors = document.querySelectorAll(".cursor, .second-cursor");
+
+  console.log("cursor:", cursor);
+  console.log("showmove:", showmove);
+  console.log("showmovesmall:", showmovesmall);
+  console.log("allCursors:", allCursors);
+
+  if (isTouch) {
+    showmovesmall?.style.setProperty("display", "block", "important");
+    cursor?.style.setProperty("display", "none", "important");
+
+    allCursors.forEach(el => {
+      el.style.setProperty("display", "none", "important");
+    });
+  } else {
+    showmove?.style.setProperty("display", "block", "important");
+    cursor?.style.setProperty("display", "block", "important");
+  }
+});
+
+function openNav() {
+  const sidenav = document.getElementById("sidenav");
+
+  if (window.innerWidth <= 768) {
+
+    sidenav.style.width = sidenav.style.width === "100%" ? "0" : "100%";
+  } else {
+
+    sidenav.style.width = sidenav.style.width === "0" ? "0" : "0";
+  }
+}
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".toplist > ul > li > a");
+
+  links.forEach(link => {
+    link.addEventListener("click", function (e) {
+      const parentLi = this.parentElement;
+      const hasSubmenu = parentLi.querySelector("ul");
+
+      if (hasSubmenu) {
+        e.preventDefault();
+        parentLi.classList.toggle("active");
+      }
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".bottomlist > ul > li > a");
+
+  links.forEach(link => {
+    link.addEventListener("click", function (e) {
+      const parentLi = this.parentElement;
+      const hasSubmenu = parentLi.querySelector("ul");
+
+      if (hasSubmenu) {
+        e.preventDefault();
+        parentLi.classList.toggle("active");
+      }
+    });
+  });
+});
+  document.addEventListener("DOMContentLoaded", function () {
+    const allLis = document.querySelectorAll(".bottomlist > ul > li");
+
+    allLis.forEach(li => {
+      const submenu = li.querySelector("ul");
+      const link = li.querySelector("a");
+
+      if (submenu && link) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          
+
+          submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        });
+      }
+    });
+  });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const allLis = document.querySelectorAll(".toplist > ul > li");
+
+    allLis.forEach(li => {
+      const submenu = li.querySelector("ul");
+      const link = li.querySelector("a");
+
+      if (submenu && link) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          
+
+          submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        });
+      }
+    });
+  });
+
+</script>
+
+
+
+
+
+</body>
+</html>
