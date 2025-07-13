@@ -6,12 +6,12 @@
   <title>Rita Silva Portefolio</title>
 
   <!-- Fonts & Styles -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css?family=Raleway|Montserrat|Roboto:400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image/x-icon" href="images/logo.png" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Raleway|Montserrat|Roboto:400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/x-icon" href="images/logo.png" />
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
@@ -41,7 +41,7 @@
 <div id="curtain"></div>
   <section class="page" id="loadingscreen">
 
-     <canvas id="stage"></canvas> <!-- move canvas OUTSIDE the flex container -->
+     <canvas id="stage"></canvas> 
     <p id="showmovesmall" style="  color: #212529;">Deslize o dedo pelo ecrã!</p>
     <p id="showmove" style="  color: #212529;">Mova o cursor pelo ecrã!</p>
     <p id="showfirst" style="  color: #212529;">
@@ -67,8 +67,8 @@ function resizeCanvas() {
   canvas.height = window.innerHeight * dpr;
   canvas.style.width = window.innerWidth + 'px';
   canvas.style.height = window.innerHeight + 'px';
-  ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset transform
-  ctx.scale(dpr, dpr); // Scale for high-res
+  ctx.setTransform(1, 0, 0, 1, 0, 0); 
+  ctx.scale(dpr, dpr); 
 }
 
 window.addEventListener('resize', resizeCanvas);
@@ -140,7 +140,6 @@ resizeCanvas();
     window.addEventListener('touchmove', handleMove, { passive: true });
     requestAnimationFrame(loop);
 
-    // UI transitions
     document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         document.getElementById("showfirst").style.display = "none";
@@ -151,8 +150,7 @@ resizeCanvas();
 
   </script>
 
-  <!-- Iconify -->
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
 <section class="page" id="index">
             <header class="header-down">
@@ -174,16 +172,14 @@ resizeCanvas();
 
 <li title="TRABALHOS">                          
 <a href="#" style="color: black; font-family: Roboto;font-size: 20px; padding: 20px">TRABALHOS</a>
-<ul style="padding-top: 16px; margin-block-start: 1em;"  onmouseover="showOverlaydownmenu()" onmouseout="hideOverlaydownmenu()">
-<li><a href="#" title="WEBSITES" target="_self">Websites</a></li>
+<ul style="padding-top: 16px; margin-block-start: 1em;">
 <li><a href="fotografias.html" title="FOTOGRAFIA" target="_self">Fotografia</a></li>
 <li><a href="videos.html" title="VIDEOS" target="_self">Vídeos</a></li>
-<li><a href="/en/the-project/" title="NOTÍCIAS DA FORMAÇÃO" target="_self" class="vibrate">Design de Comunicação</a></li>
 </ul>
 </li>
 
 <li title="CONTACTOS">                       
-<a href="contactos.html" style="color: black; font-family: Roboto;font-size: 20px; padding: 20px">CONTACTOS</a>
+<a href="contactos.html" style="color: black; font-family: Roboto;font-size: 20px; padding: 20px;  padding-right: 0px;">CONTACTOS</a>
 </li>
                     </ul>
 
@@ -217,7 +213,6 @@ resizeCanvas();
 <li>
 <a href="#" class="active" title="TRABALHOS" target="_self" id="haslist">TRABALHOS</a>
 <ul>
-<li><a href="#" title="WEBSITES">WEBSITES</a></li>
 <li><a href="fotografias.html" title="FOTOGRAFIA">FOTOGRAFIA</a></li>
 <li><a href="videos.html" title="VIDEOS">VÍDEOS</a></li>
 </ul>
@@ -254,11 +249,11 @@ resizeCanvas();
 
 <script>
 function showPage(id) {
-      // Hide all pages
+
       const pages = document.querySelectorAll('.page');
       pages.forEach(page => page.style.display = 'none');
 
-      // Show selected page
+
       document.getElementById(id).style.display = 'flex';
     }
     document.addEventListener("DOMContentLoaded", function () {
@@ -291,7 +286,7 @@ function showPage(id) {
 function openNav() {
   const sidenav = document.getElementById("sidenav");
 
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 1024) {
 
     sidenav.style.width = sidenav.style.width === "100%" ? "0" : "100%";
   } else {
