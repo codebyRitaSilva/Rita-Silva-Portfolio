@@ -54,7 +54,7 @@
      <header class="header-down">
             <div class="wrapper">
                 <div class="logo-top" id="logo-top">
-                    <a href="#" title="logo"><img src="images/h1_.svg" alt="logo" /></a>
+                    <a href="loading.html" title="logo"><img src="images/h1_.svg" alt="logo" /></a>
                 </div>
                 
                 <nav class="menu">
@@ -65,21 +65,19 @@
 
 
 <li title="INÍCIO">
-<a href="index.html" style="color: black; font-family: Roboto;font-size: 20px; padding: 20px">INÍCIO</a>
+<a href="loading.html" style="color: black; font-family: Roboto;font-size: 20px; padding: 20px">INÍCIO</a>
 </li>
 
 <li title="TRABALHOS">                          
 <a href="#" style="color: black; font-family: Roboto;font-size: 20px; padding: 20px">TRABALHOS</a>
-<ul style="padding-top: 16px; margin-block-start: 1em;"  onmouseover="showOverlaydownmenu()" onmouseout="hideOverlaydownmenu()">
-<li><a href="#" title="WEBSITES" target="_self">Websites</a></li>
+<ul style="padding-top: 16px; margin-block-start: 1em;">
 <li><a href="fotografias.html" title="FOTOGRAFIA" target="_self">Fotografia</a></li>
 <li><a href="#" title="VIDEOS" target="_self">Vídeos</a></li>
-<li><a href="/en/the-project/" title="NOTÍCIAS DA FORMAÇÃO" target="_self" class="vibrate">Design de Comunicação</a></li>
 </ul>
 </li>
 
 <li title="CONTACTOS">                       
-<a href="contactos.html" style="color: black; font-family: Roboto;font-size: 20px; padding: 20px">CONTACTOS</a>
+<a href="contactos.html" style="color: black; font-family: Roboto;font-size: 20px; padding: 20px;  padding-right: 0px;">CONTACTOS</a>
 </li>
                     </ul>
 </nav>
@@ -87,7 +85,7 @@
                   <!-- botao menu hamburguer (ecrãs LG, MD, SM, XS) -->
             
                 <span class="btn-mobile-menu open vibration vibrate" id="hammenu">
-                    <i class="fas fa-bars fa-lg iconspace" style=" font-size: 24px;" onclick="openNav()" id="hammenu"></i>
+                    <i class="fas fa-bars fa-lg iconspace" style=" font-size: 24px;" onclick="openNav(); console.log('clicked')" id="hammenu"></i>
                 </span>
 
 
@@ -111,7 +109,6 @@
 <li>
 <a href="#" class="active" title="TRABALHOS" target="_self" id="haslist">TRABALHOS</a>
 <ul>
-<li><a href="#" title="WEBSITES">WEBSITES</a></li>
 <li><a href="fotografias.html" title="FOTOGRAFIA">FOTOGRAFIA</a></li>
 <li><a href="#" title="VIDEOS">VÍDEOS</a></li>
 </ul>
@@ -148,7 +145,7 @@
     <div id="content-container">
         <div class="content-block">
             <div class="content-right">
-                <div class="allcontent">
+                <div class="allcontent1">
 <div class="videobox">                    
 <div style="z-index: 1; padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1099421376?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Silêncio"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 </div>
@@ -800,7 +797,7 @@ function openLightbox(imgElement) {
   lightboxImg.alt = imgElement.alt;
   lightbox.style.display = 'flex';
 
-  // 🔄 Apply class directly to cursor
+
   document.querySelector('.cursor')?.classList.add('lightbox-hover');
   document.querySelector('.second-cursor')?.classList.add('lightbox-hover');
 }
@@ -814,7 +811,7 @@ function closeLightbox(e) {
 
   document.getElementById('lightbox').style.display = 'none';
 
-  // 🔄 Remove class from cursor
+
   document.querySelector('.cursor')?.classList.remove('lightbox-hover');
   document.querySelector('.second-cursor')?.classList.remove('lightbox-hover');
 }
@@ -861,7 +858,7 @@ function showPage(id) {
 function openNav() {
   const sidenav = document.getElementById("sidenav");
 
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 1024) {
 
     sidenav.style.width = sidenav.style.width === "100%" ? "0" : "100%";
   } else {
