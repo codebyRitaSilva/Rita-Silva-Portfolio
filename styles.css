@@ -283,7 +283,7 @@ margin-bottom: 15px;
 .titulovideo {
 margin-top: 15px;
 margin-bottom: 15px;
-
+text-align: left;
 }
 
     footer {
@@ -818,7 +818,7 @@ li {
     -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
     display: block;
-    padding: 0 0 5px 5px;
+    padding: 0 0 5px 0px;
     width: 150px;
     position: absolute;
     top:37px;
@@ -1196,6 +1196,15 @@ padding-left: 10px;
   margin-left: auto;         /* This centers it horizontally */
   box-sizing: border-box; /* Makes width include padding/border */
   padding: 20px;
+}
+
+.allcontent1 {
+
+  width: 750px;
+  margin-left: auto;         /* This centers it horizontally */
+  box-sizing: border-box; /* Makes width include padding/border */
+  padding: 20px;
+  padding-right: 0px;
 }
 
 .allcontent h2{
