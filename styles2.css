@@ -29,7 +29,6 @@
 #lightbox-img {
   -webkit-user-drag: none;
   user-select: none;
-  pointer-events: none; /* disables right-click and drag */
 }
 
 
@@ -44,27 +43,11 @@
 }
 
 
-.lightbox-close {
-  position: absolute;
-  top: 10px;
-  font-size: 30px;
-  color: white !important;
-  cursor: pointer;
-  z-index: 1001;
-  user-select: none;
-    right: 30px;
-}
-.lightbox-close svg {
-  cursor: pointer;
-  display: block;
-}
-
 
 
 .slideshow-container {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 aspect ratio */
   overflow: hidden;
   margin-bottom: 20px;
 }
@@ -201,7 +184,7 @@ text-decoration: none;
   user-select: none;
 }
 #lightbox {
-  display: none;
+display:none;
   position: fixed;
   top: 0; left: 0;
   width: 100vw;
@@ -799,7 +782,7 @@ li {
     -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
     display: block;
-    padding: 0 0 5px 5px;
+    padding: 0 0 5px 0px;
     width: 150px;
     position: absolute;
     top:37px;
@@ -1737,7 +1720,66 @@ width: 100%;
     }
 }
 
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  /* add flex so children position easier */
+  flex-direction: column;
+  /* position relative to position .lightbox-buttons absolutely inside */
+  position: fixed;
+}
+
+.lightbox-buttons {
+  position: absolute;
+  top: 10px;
+  right: 2vw;
+  display: flex;
+  gap: 1.5rem;
+  z-index: 1001;
+  user-select: none;
+
+  /* make sure it can contain its children */
+  min-width: 70px; 
+  min-height: 40px;
+}
+
+.lightbox-zoom,
+.lightbox-close {
+  cursor: pointer;
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white !important;
+}
+
 @media (max-width: 575.98px) {
+
+
+
+  .watermark {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1rem;
+  font-weight: bold;
+  pointer-events: none;
+  z-index: 2;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
 
 .wrapper {
     width: 100%;
@@ -1820,16 +1862,6 @@ text-decoration: none;
 
 @media (max-width: 400px) {
 
-.lightbox-close {
-  position: absolute;
-  top: 10px;
-  font-size: 30px;
-  color: white !important;
-  cursor: pointer;
-  z-index: 1001;
-  user-select: none;
-    right: 10px;
-}
 
      .linksendofpage {
         margin-top: 0px;
@@ -1916,3 +1948,37 @@ width: 9vh !important;
   }
 
      } 
+
+#lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  cursor: zoom-in;
+  user-select: none;
+  transition: transform 0.3s ease;
+  position: relative; /* for transform */
+}
+
+#lightbox-img.zoomed {
+  cursor: grab;
+  /* We'll use transform to scale and translate */
+  transform: scale(2) translate(0, 0);
+}
+
+#lightbox-img.zoomed {
+  cursor: grab;
+}
+
+#lightbox-img.zoomed {
+  cursor: grab;
+  transition: transform 0.1s ease;
+}
+
+.hover-fade {
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.hover-fade:hover {
+  filter: brightness(0.8); /* darker */
+  transform: rotate(180deg) scaleX(-1) scale(1.02);
+  cursor: pointer;
+}
